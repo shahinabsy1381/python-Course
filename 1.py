@@ -62,17 +62,17 @@ answer:
 
 Exercise 9
 answer:
-A = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20] ==> A[0:5] ==> [2, 4, 6, 8, 10]
-A = [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10] ==> A[6:11] ==> [2, 4, 6, 8, 10]
-A = [2, 3, 4, 5, 6, 7, 8, 10] ==> A[0:7:2] + A[7:] ==>! [2, 4, 6, 8, 10]
-A = [2, 4, 6, 'a', 'b', 'c', 8, 10] ==> A[0:3] + A[6:] ==> [2, 4, 6, 8, 10]
-A = [2, 4, 6, 8, 10] ==> A[0:5] ==> [2, 4, 6, 8, 10]
-A = [] ==> IMPOSSIBLE !! HOWEVER => A[0:] + [2, 4, 6, 8, 10] ==> [2, 4, 6, 8, 10]
-A = [10, 8, 6, 4, 2] ==> A[-1:-6:-1] ==> [2, 4, 6, 8, 10]
-A = [2, 4, 6] ==> IMPOSSIBLE !! HOWEVER => A[0:4] + [8, 10] ==> [2, 4, 6, 8, 10]
-A = [6, 8, 10] ==> IMPOSSIBLE !! HOWEVER => [2, 4] + A[0:4] ==> [2, 4, 6, 8, 10]
-A = [2, 10] ==> IMPOSSIBLE !! HOWEVER => A[0:1] + [4, 6, 8] + A[1:2] ==> [2, 4, 6, 8, 10]
-A = [4, 6, 8] ==> IMPOSSIBLE !! HOWEVER => [2] + A[0:3] + [10] ==> [2, 4, 6, 8, 10]
+(a)lst[0:5]=[2,4,8,10]
+(b)lst[6:11]=[2,4,6,8,10]
+(C)lst[7: ]=![2,4,6,8,10]
+(d)lst[3:4]=['a','b','c']
+(e)lst[ : ]
+(f)lst[0:0]
+(g)lst[-1: ]
+(h)lst[ :3]
+(i)lst[2: ]
+(j)lst[1:4]=[ ]
+(k)lst[1:4]
 
 
 Exercise 10
@@ -114,15 +114,15 @@ Exercise 15
 answer:
 def sumlist(L):
     sum=0
-    for n in L:
-        if n>0:
-            sum+=n
+    for m in L:
+        if m>0:
+            sum+=m
     return sum 
     
 L=[]
 for i in range (0,4):
-    n=int(input("Enter a number of list:"))
-    L+=[n]
+    m=int(input("Enter a number of list:"))
+    L+=[m]
     
 z= sumlist(L) 
 print(z,"the sum of positive numbers")
@@ -134,15 +134,15 @@ Exercise 16
 answer:
 def count_evens(nums):
     count = 0
-    for n in nums:
+    for m in nums:
         if  n%2==0:
             count += 1
     return count
     
 nums=[]
 for i in range (0,4):
-    n=int(input("Enter a number of list:"))
-    nums+=[n]
+    m=int(input("Enter a number of list:"))
+    nums+=[m]
     
     
 print (count_evens(nums))
@@ -241,15 +241,15 @@ print("[1,2,3,4,5,6,7,8,9,10]")
 
 Exercise 22
 answer:
-def Q22(m):
-    new_mat = [[0] * len(m)] * len(m)
-    for i in range(len(m)):
-        for j in range(len(m[0])):
-            new_mat[j][i] = m[i][j]
+def matris 2 body(r):
+    new_mat = [[0] * len(r)] * len(r)
+    for i in range(len(r)):
+        for j in range(len(r[0])):
+            new_mat[j][i] = r[i][j]
     flag = 0
-    for i in range(len(m)):
-        for j in range(len(m)):
-            if m[i] == new_mat[j]:
+    for i in range(len(r)):
+        for j in range(len(r)):
+            if r[i] == new_mat[j]:
                 flag = 1
     if flag:
         return True
@@ -259,11 +259,11 @@ def Q22(m):
 
 Exercise 23
 answer:
-def check_winner(m):
-    new_mat = [[0] * len(m)] * len(m)
-    for i in range(len(m)):
-        for j in range(len(m[0])):
-            new_mat[j][i] = m[i][j]
+def check_winner(p):
+    new_mat = [[0] * len(p)] * len(p)
+    for i in range(len(p)):
+        for j in range(len(p[0])):
+            new_mat[j][i] = p[i][j]
     for i in m:
         if i[0] == i[1] == i[2] == 'X':
             return 'X'
@@ -274,13 +274,13 @@ def check_winner(m):
             return 'X'
         elif i[0] == i[1] == i[2] == 'O':
             return 'O'
-    if m[0][0] == m[1][1] == m[2][2] == 'X':
+    if p[0][0] == p[1][1] == p[2][2] == 'X':
         return 'X'
-    elif m[0][0] == m[1][1] == m[2][2] == 'O':
+    elif p[0][0] == p[1][1] == p[2][2] == 'O':
         return 'O'
-    if m[0][2] == m[1][1] == m[2][0] == 'X':
+    if p[0][2] == p[1][1] == p[2][0] == 'X':
         return 'X'
-    elif m[0][2] == m[1][1] == m[2][0] == 'X':
+    elif p[0][2] == p[1][1] == p[2][0] == 'X':
         return 'O'
     return ' '
 """
